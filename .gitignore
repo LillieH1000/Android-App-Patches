@@ -1,0 +1,12 @@
+# Deno
+deno.lock
+fmt/
+
+# macOS
+.DS_Store
+
+# Node.js
+node_modules/
+
+# Visual Studio Code
+.vscode/
