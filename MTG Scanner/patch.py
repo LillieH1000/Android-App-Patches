@@ -5,34 +5,26 @@ import textwrap
 def LicenseClient(path):
     with open(path, "r") as file:
         lines = file.readlines()
-
         output = []
-        method = False
         skip = False
 
         for line in lines:
-            if ".method private performLocalInstallerCheck(" in line:
-                method = True
-                output.append(line)
+            if skip:
+                if ".end method" in line:
+                    output.append(line.lstrip())
+                    skip = False
                 continue
 
-            if method:
-                if ".locals" in line and "6" in line:
-                    output.append(textwrap.indent(textwrap.dedent("""\
+            if ".method private performLocalInstallerCheck(" in line:
+                output.append(line)
+                output.append(textwrap.indent(textwrap.dedent("""\
                         .locals 1
 
                         const/4 v0, 0x1
                         return v0
                     """), "\t"))
-                    skip = True
-                    continue
-
-                if skip:
-                    if ".end method" in line:
-                        method = False
-                        output.append(line.lstrip())
-                        skip = False
-                    continue
+                skip = True
+                continue
 
             output.append(line)
 
