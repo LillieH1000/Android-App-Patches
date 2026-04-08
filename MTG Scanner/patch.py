@@ -1,6 +1,6 @@
 import textwrap
 
-# LicenseClient (smali)
+# LicenseClient (smali_classes2)
 
 def LicenseClient(path):
     with open(path, "r") as file:
@@ -31,7 +31,7 @@ def LicenseClient(path):
     with open(path, "w") as file:
         file.writelines(output)
 
-# SubscriptionHelper (smali)
+# SubscriptionHelper (smali_classes6)
 
 def SubscriptionHelper(path):
     with open(path, "r") as file:
