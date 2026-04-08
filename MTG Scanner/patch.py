@@ -1,8 +1,8 @@
 import textwrap
 
-# Test (smali)
+# LicenseClient (smali)
 
-def Test(path):
+def LicenseClient(path):
     with open(path, "r") as file:
         lines = file.readlines()
 
@@ -11,16 +11,18 @@ def Test(path):
         skip = False
 
         for line in lines:
-            if ".method public static show(" in line:
+            if ".method private performLocalInstallerCheck(" in line:
                 method = True
                 output.append(line)
                 continue
 
             if method:
-                if ".locals" in line and "7" in line:
-                    output.append(line)
-                    output.append(textwrap.indent(textwrap.dedent("""
-                        return-void
+                if ".locals" in line and "6" in line:
+                    output.append(textwrap.indent(textwrap.dedent("""\
+                        .locals 1
+
+                        const/4 v0, 0x1
+                        return v0
                     """), "\t"))
                     skip = True
                     continue
@@ -39,4 +41,4 @@ def Test(path):
 
 # Patches
 
-Test("")
+LicenseClient("pt.tscg.mtgmanager/smali_classes2/com/pairip/licensecheck/LicenseClient.smali") # Play Store Check
