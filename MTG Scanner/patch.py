@@ -1,7 +1,5 @@
 import textwrap
 
-# Claim (smali_classes6)
-
 def Claim(path):
     with open(path, "r") as file:
         lines = file.readlines()
@@ -41,8 +39,6 @@ def Claim(path):
     with open(path, "w") as file:
         file.writelines(output)
 
-# LicenseClient (smali_classes2)
-
 def LicenseClient(path):
     with open(path, "r") as file:
         lines = file.readlines()
@@ -71,8 +67,6 @@ def LicenseClient(path):
 
     with open(path, "w") as file:
         file.writelines(output)
-
-# ManagerPreferencesHelper (smali_classes6)
 
 def ManagerPreferencesHelper(path):
     with open(path, "r") as file:
@@ -133,8 +127,6 @@ def ManagerPreferencesHelper(path):
 
     with open(path, "w") as file:
         file.writelines(output)
-
-# SubscriptionHelper (smali_classes6)
 
 def SubscriptionHelper(path):
     with open(path, "r") as file:
@@ -216,9 +208,7 @@ def SubscriptionHelper(path):
     with open(path, "w") as file:
         file.writelines(output)
 
-# Patches
-
-Claim("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/business/model/Claim.smali") # Premium Banners
-LicenseClient("pt.tscg.mtgmanager/smali_classes2/com/pairip/licensecheck/LicenseClient.smali") # Play Store Check
-ManagerPreferencesHelper("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/helper/ManagerPreferencesHelper.smali") # Premium Popups
-SubscriptionHelper("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/helper/SubscriptionHelper.smali") # Premium Check - Free Check - Premium Popups
+Claim("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/business/model/Claim.smali")
+LicenseClient("pt.tscg.mtgmanager/smali_classes2/com/pairip/licensecheck/LicenseClient.smali")
+ManagerPreferencesHelper("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/helper/ManagerPreferencesHelper.smali")
+SubscriptionHelper("pt.tscg.mtgmanager/smali_classes6/com/bigar/manager/helper/SubscriptionHelper.smali")

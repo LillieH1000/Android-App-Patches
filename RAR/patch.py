@@ -1,7 +1,5 @@
 import textwrap
 
-# AdsNotify (smali)
-
 def AdsNotify(path):
     with open(path, "r") as file:
         lines = file.readlines()
@@ -30,6 +28,4 @@ def AdsNotify(path):
     with open(path, "w") as file:
         file.writelines(output)
 
-# Patches
-
-AdsNotify("com.rarlab.rar/smali/com/rarlab/rar/AdsNotify.smali") # Ad Popup
+AdsNotify("com.rarlab.rar/smali/com/rarlab/rar/AdsNotify.smali")

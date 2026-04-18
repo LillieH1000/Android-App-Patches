@@ -1,7 +1,5 @@
 import textwrap
 
-# LicenseLevel (smali_classes3)
-
 def LicenseLevel(path):
     with open(path, "r") as file:
         lines = file.readlines()
@@ -32,8 +30,6 @@ def LicenseLevel(path):
 
     with open(path, "w") as file:
         file.writelines(output)
-
-# OsFeaturesCheckProxy (smali_classes3)
 
 def OsFeaturesCheckProxy(path):
     with open(path, "r") as file:
@@ -218,7 +214,5 @@ def OsFeaturesCheckProxy(path):
     with open(path, "w") as file:
         file.writelines(output)
 
-# Patches
-
-LicenseLevel("com.mobisystems.office/smali_classes3/com/mobisystems/registration2/types/LicenseLevel.smali") # Premium License Level
-OsFeaturesCheckProxy("com.mobisystems.office/smali_classes3/com/mobisystems/registration2/OsFeaturesCheckProxy.smali") # Premium Check - Free Check
+LicenseLevel("com.mobisystems.office/smali_classes3/com/mobisystems/registration2/types/LicenseLevel.smali")
+OsFeaturesCheckProxy("com.mobisystems.office/smali_classes3/com/mobisystems/registration2/OsFeaturesCheckProxy.smali")
