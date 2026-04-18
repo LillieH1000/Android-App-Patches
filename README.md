@@ -8,6 +8,7 @@
 </div><br>
 
 #### Patches:
+- [MobiOffice](https://play.google.com/store/apps/details?id=com.mobisystems.office) - Unlock premium
 - [MTG Scanner - Dragon Shield](https://play.google.com/store/apps/details?id=pt.tscg.mtgmanager) - Unlock premium and bypass play store check
 - [RAR](https://play.google.com/store/apps/details?id=com.rarlab.rar) - Remove start ad popup
 
