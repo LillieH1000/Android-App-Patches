@@ -3,7 +3,6 @@
 # Android App Patches
 
 #### My personal collection of Android app patches that do things such as removed ads, unlock premium and more.
-#### More patches will be added and updated overtime.
 
 </div><br>
 
